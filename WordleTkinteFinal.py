@@ -60,7 +60,9 @@ class WGUI:
             self.root = root
             self.root.title("Tkinter Wordle - Final Project")
             self.root.configure(bg='#121213')
-            self.gamesplayed = 32
+            #Amount of games played
+            self.gamesplayed = tk.IntVar(32)
+            self.gamesplayed.set(self.gamesplayed.get() + 1)
             for i in range(5):
                 self.root.columnconfigure(i, weight=1)
 
@@ -91,7 +93,7 @@ class WGUI:
             self.gamesplayed_label = tk.Label(self.root, text="Games Played: ", font=("Helvetica", 10, "bold"), bg="#121213", fg="white")
             self.gamesplayed_label.grid(row=0, column=0, columnspan=1, pady=(10, 0))
             
-            self.gamesplayed_labelvar = tk.Label(self.root, textvariable=str(self.gamesplayed), font=("Helvetica", 10, "bold"), bg="#0606EC", fg="white") 
+            self.gamesplayed_labelvar = tk.Label(self.root, textvariable=self.gamesplayed, font=("Helvetica", 10, "bold"), bg="#0606EC", fg="white") 
             self.gamesplayed_labelvar.grid(row=0, column=0, columnspan=2, pady=(10, 0))
             #Creates type box that you input guess into
             self.entry = tk.Entry(self.root, font=("Helvetica", 20), justify="center", bg="#3a3a3c", fg="white", insertbackground="white", relief="flat", bd=2)
