@@ -62,7 +62,6 @@ class WGUI:
             self.root.configure(bg='#121213')
             #Amount of games played
             self.gamesplayed = tk.IntVar(32)
-            self.gamesplayed.set(self.gamesplayed.get() + 1)
             for i in range(5):
                 self.root.columnconfigure(i, weight=1)
 
