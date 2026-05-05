@@ -1,6 +1,7 @@
+#Carson Everhart
 #period 6
 #Tkinter Final
-#Time Spent:
+#Time Spent: 4 days
 
 
 #Adding tkinter and random
